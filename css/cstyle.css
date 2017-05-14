@@ -1,0 +1,206 @@
+body{
+margin-left:1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+margin-top:0px;
+}
+
+/* available in style.css also */
+#header{
+ padding-top: -10px; 
+ padding-left:20px;
+ height:83px;
+ position:static;
+ margin-top: -2px !important;
+ }
+
+#navTable {
+background: url(../images/header.jpg) repeat-x scroll left top transparent;
+float: left;
+margin-bottom: 5px !important;
+
+}
+
+#dImage {
+	background-color:green;
+    overflow: hidden;
+    align:left;
+	height:25px; 
+	width:25px;
+}
+
+#arrow {
+  transform-origin: top left;
+  /* IE 10+, Firefox, etc. */
+  -webkit-transform-origin: top left;
+  /* Chrome */
+  -ms-transform-origin: top left;
+  /* IE 9 */
+
+  margin-right:5px;
+   margin-top: 2px;
+   height: 18px;
+   width:25px;
+}
+
+
+#arrow.rotateDown {
+  transform: rotate(180deg) translate(-100%, -100%);
+  -webkit-transform: rotate(180deg) translate(-100%, -100%);
+  -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+
+.navbar-default  {
+ background-color:#577AA0 !important; 
+ /* 
+  background: url(../images/header.jpg) repeat-x scroll left top transparent;
+  background-color: #8B0000!important;
+ background-color: #00FF00 !important; */
+ border-color: #e7e7e7;
+}
+
+.nav {
+  height: 25px !important;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+
+.divAlignLeft {
+float:left; 
+margin-left:5px;
+}
+
+.divAlignRight {
+float:right; 
+margin-top:2px;
+margin-right:5px;
+}
+
+
+
+/*
+.dropdown-menu {
+  background-color:#577AA0 !important;
+}
+*/
+
+#iHamburger{
+margin-top:2px;
+margin-bottom:2px;
+margin-left:-32px;
+}
+
+#iHamburger2{
+ margin-left:-32px; 
+}
+
+#imageToggler{
+/*    height: 23px;
+    width: 25px; */
+    margin-left: 0;
+    float: left;
+    margin-right: 7px;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-top: 1px;
+    margin-bottom:1px;
+}
+
+.dropdown-menu > li > a {
+    color: #f5f5f5 !important;
+}
+
+.container{ 
+
+}
+
+.dropdown-menu {
+    padding: 5px 0 !important;
+    margin: -0.7px 0 0 !important;
+
+}
+
+#pagetitle {
+margin-bottom:-0.8rem;
+
+
+}
+ 
+.modal{
+
+top:50% !important;
+}
+
+
+/* govinda... */
+#headerNav .treeview ul li:hover {
+    background: green;
+    text-decoration: none;
+}
+
+#headerNav .treeview li ul li:hover{
+    background:grey;
+}
+
+#headerNav .treeview ul li a {
+  text-decoration: none;
+}
+
+
+#idMenuBlock {
+  display: none;
+  padding-top: 0px;
+  width: 300px; 
+padding-left: 2px;
+position: absolute;
+
+}
+
+#idSubmenu {
+  display: none;
+}
+
+#idSubmenu2 {
+  display: none;
+}
+
+
+
+#level1 {
+  padding-left: 10px !important;
+
+}
+
+#level3 {
+  margin-left: -40px !important;
+  padding-left: 80px !important;
+
+}
+
+/*
+
+*/
+
+.row {
+}
+
+#bs-example{
+    	margin: 150px 50px;
+    }
+	
+	
+ #popover-demo{
+        margin-bottom: 20px;
+    }
+
+ #imgLogo{
+  width:75px;
+  height:75px;
+  padding: 2px 2px 2px;
+  }
+
+
+
+
+

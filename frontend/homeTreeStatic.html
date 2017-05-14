@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Just Menu Bar</title>
+
+<link rel="stylesheet" type="text/css" href="../css/cstyle.css" />
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../css/jquery.treeview.css"/>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css"/>
+<link rel="stylesheet" type="text/css" href="../css/styles.css"  />
+<link rel="stylesheet" type="text/css" href="../css/menu.css" />
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery.treeview.js"></script>
+
+
+
+</head>
+<body>
+<div class="logo" id="header"><img id="imgLogo" src="../images/globe info track .png" ></div>
+<table id="navTable" Width="100%" cellspacing="0">
+    <tr>
+		<td  height="25">
+	    	<a href="#" id="imageToggler"><img id="iHamburger3" src="../images/header_menu_list.png"/></a>
+			
+			<!-- I want to remove line no. 30 to 32 -->
+			<div id="headerNav" >
+				<ul id="treeview" class="treeview">
+			    	<li id="menuToggler"></li> <!-- if you remove this li you need to add padding-left:26 at class #idMenuBlock in cstyle.css-->
+
+					<ul id="idMenuBlock" >
+				        	<li id="level1"><a href="home.aspx">1.Home from text</a></li>
+				        	<li id="level1Plus" class="expandable">
+				          		<div id="idHitarea" class="hitarea expandable-hitarea"></div>
+				          		<a href="projects.aspx" class="">2.Projects</a>
+				          		<ul id="idSubmenu">
+						            <li id="level2"><a href="subone.aspx">2.1 Sub One</a></li>
+						            <li id="level2"><a href="subtwo.aspx">2.2 Sub Two</a></li>
+						            <li id="level2" ><a href="subthree.aspx">2.3 Sub Three</a></li>
+									<li id="level2Plus" class="expandable">
+										<div id="idHitarea2" class="hitarea expandable-hitarea"></div>
+										<a href="projects.aspx">2.4 Projects-Sub-four</a>
+										<ul id="idSubmenu2">
+											<li id="level3"><a href="subone.aspx" >2.4.1 submenu</a></li>
+											<li id="level3"><a href="subone.aspx" >2.4.2 Submenu</a></li>
+										</ul>
+									</li>
+					        		<li id="level2" class="last"><a href="subthree.aspx" class="">2.5 Submenu</a></li>
+				          		</ul>
+				        	</li>
+				        	<li	id="level1"><a href="http://abc.com">3. ABC</a></li>
+				        	<li id="level1"><a href="http://msn.com">4. msn</a></li>
+				        	<li id="level1" class="last"><a href="http://google.com">5. google</a></li>
+			  		</ul>
+
+
+			  	</ul>	
+			</div>
+
+		</td>
+		<td >
+			<img id="arrow" src="../images/transTriangle1.png" align="right" height="25" width="25"  onClick="toggle()"/>
+		</td>
+	</tr>
+</table>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="btn-toolbar">
+			
+				<div class="btn-group">
+					<a href="" id="button" class="btn btn-info"  data-toggle="tooltip" title="Click here to Start">Start</a>
+					 <a href="" id="button" class="btn btn-primary" data-toggle="tooltip" title="Click here to Add a menu after selected Menu">Add After</a>
+					 <a href="" id="button" class="btn btn-success" data-toggle="tooltip" title="Click here to Add a menu before selected Menu">Add Before</a>
+					 <a href=""  id="button" class="btn btn-info" data-toggle="tooltip" title="Click here to Add a menu above the selected Menu">Add Above</a>
+					 <a href=""  id="button" class="btn btn-warning" data-toggle="tooltip" title="Click here to Add a menu below selected Menu">Add Below</a>
+					 <a href=""  id="button" class="btn btn-info" data-toggle="tooltip" title="Click here to move up">Move up</a>
+					 <a href=""  id="button" class="btn btn-primary" data-toggle="tooltip" title="Click here to move down">Move Down</a>
+					 <a href=""  id="button" class="btn btn-danger" data-toggle="tooltip" title="Click here to close" >Delete</a>
+					 <a href=""  class="btn btn-success" data-toggle="modal" data-target="#popUpWindow">Preview</a>
+					 <a href=""  id="button" class="btn btn-info" data-toggle="tooltip" title="Click here to expand">Expand All</a>
+					 <a href=""  id="button" class="btn btn-warning" data-toggle="tooltip" title="Click here to collapse all">Collapse All</a>
+					 <a href=""  id="button" class="btn btn-info"  data-toggle="modal"  data-target="#popUpWindow2" data-toggle="tooltip" title="Click here to collapse all">Popup Test</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script>
+
+var i='up'
+function toggle() {
+img = document.getElementById('arrow');
+if (i=='up'){
+	i='down';
+	document.getElementById("header").style.display = "none"
+	return 	img.className = "rotateDown";
+}
+if (i=='down'){
+	i='up'
+	document.getElementById("header").style.display = ""
+	return 	img.className = "";
+}
+}
+
+
+$(document).ready(function (){
+
+$("#iHamburger3").click(function(){
+		$("#idMenuBlock").toggle();
+});
+
+
+var k='plus';
+var m='plus';
+//$("#idHitarea").click(function(){
+$(document).on('click', '#idHitarea', function (){
+// 	alert('value of k: '+k+' and m :'+m);
+	$("#idSubmenu").toggle();
+if (k=='plus'){
+		$("#idHitarea").removeClass("expandable-hitarea").addClass("collapsable-hitarea");
+	k='minus';
+	return k;
+} 
+if (k=='minus'){
+	k='plus';
+		$("#idHitarea").removeClass("collapsable-hitarea").addClass("expandable-hitarea");
+return k;		
+}//end if;
+}); 
+
+
+var m='plus';
+$(document).on('click', '#idHitarea2', function (){
+// 	alert('value of k: '+k+' and m :'+m);
+	$("#idSubmenu2").toggle();
+	if (m=='plus'){
+		$("#idHitarea2").removeClass("expandable-hitarea").addClass("collapsable-hitarea");
+	m='minus';
+	return m;
+	} 
+	if (m=='minus'){
+		m='plus';
+		$("#idHitarea2").removeClass("collapsable-hitarea").addClass("expandable-hitarea");
+		return m;		
+	}//end if;
+}); 
+
+});
+
+
+
+
+</script>
+
+
+
